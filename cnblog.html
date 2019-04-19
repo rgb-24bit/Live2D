@@ -1,0 +1,25 @@
+<!-- 页首 Html 代码 -->
+<link href="https://blog-static.cnblogs.com/files/rgbit/live2d.css" rel="stylesheet"/>
+
+<!-- 页脚 Html 代码 -->
+<div>
+  <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+  </div>
+
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+  <script>
+   var messagePath = 'https://raw.githubusercontent.com/rgb-24bit/Live2D/master/live2d/'
+   var homePath = 'https://rgb-24bit.github.io/'
+  </script>
+
+  <script type="text/javascript" src="https://blog-static.cnblogs.com/files/rgbit/live2d.js"></script>
+  <script type="text/javascript" src="https://blog-static.cnblogs.com/files/rgbit/message.js"></script>
+
+  <script>
+   loadlive2d("live2d", "https://raw.githubusercontent.com/rgb-24bit/Live2D/master/live2d//model/pio/model.json");
+  </script>
+</div>
