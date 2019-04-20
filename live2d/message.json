@@ -7,6 +7,10 @@
     {
       "selector": ".dayTitle a",
       "text": ["这是我在 {text} 编写的博客 ^_^"]
+    },
+    {
+      "selector": "details",
+      "text": ["这是我隐藏的吐槽 >_>"]
     }
   ],
   "click": [
