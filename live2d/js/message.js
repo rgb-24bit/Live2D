@@ -20,12 +20,12 @@ String.prototype.renderTip = function (context) {
     return renderTip(this, context);
 };
 
-var re = /x/;
-console.log(re);
-re.toString = function() {
-    showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
-    return '';
-};
+// var re = /x/;
+// console.log(re);
+// re.toString = function() {
+//     showMessage('哈哈，你打开了控制台，是想要看看我的秘密吗？', 5000);
+//     return '';
+// };
 
 $(document).on('copy', function (){
     showMessage('你都复制了些什么呀，转载要记得加上出处哦~~', 5000);
@@ -35,6 +35,7 @@ function initTips(){
     $.ajax({
         cache: true,
         url: `${messagePath}message.json`,
+        method: 'GET',
         dataType: "json",
         success: function (result){
             $.each(result.mouseover, function (index, tips){
@@ -101,7 +102,7 @@ initTips();
     showMessage(text, 12000);
 })();
 
-window.setInterval(showHitokoto,30000);
+window.setInterval(showHitokoto, 30000);
 
 function showHitokoto(){
     $.getJSON('https://v1.hitokoto.cn/',function(result){
@@ -126,12 +127,13 @@ function hideMessage(timeout){
 
 function initLive2d (){
     $('.hide-button').fadeOut(0).on('click', () => {
-        $('#landlord').css('display', 'none')
-    })
+        $('#landlord').css('display', 'none');
+    });
     $('#landlord').hover(() => {
-        $('.hide-button').fadeIn(600)
+        $('.hide-button').fadeIn(600);
     }, () => {
-        $('.hide-button').fadeOut(600)
-    })
+        $('.hide-button').fadeOut(600);
+    });
 }
+
 initLive2d ();
